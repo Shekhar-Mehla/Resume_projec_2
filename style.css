@@ -3,6 +3,10 @@
   box-sizing: border-box;
   margin: 0px;
 }
+a:hover,
+label:hover {
+  cursor: pointer;
+}
 :root {
   --bg-color: rgb(113 236 174 / 11%);
   --shadow: 2px 2px 40px #00000087;
@@ -238,10 +242,15 @@ a {
 .about_me {
   background-color: var(--oranged-color);
   flex-direction: column;
-  gap: 3rem;
-  padding-top: 15rem;
+  gap: 10rem;
+  padding-top: 6rem;
   box-shadow: var(--shadow);
-  padding-bottom: 2rem;
+  padding-bottom: 3rem;
+  margin-top: 16rem;
+}
+.contact_me_container {
+  width: 40vw;
+  flex-direction: column;
 }
 .about_me span {
   font-size: 2rem;
@@ -267,13 +276,16 @@ a {
 
 /* contact section */
 .contact_me {
-  gap: 5rem;
-  margin-top: 30rem;
-  padding-top: 3rem;
+  padding-top: 4rem;
   flex-direction: column;
   padding-bottom: 1rem;
+  font-size: 2rem;
+  margin: 17rem 2rem;
 }
-.contact_me > :first-child {
+.contact_me_container {
+  gap: 3rem;
+}
+.contact_me .contact_me_container > span:first-child {
   font-size: 2rem;
   font-weight: bolder;
   border-bottom: 5px solid orangered;
