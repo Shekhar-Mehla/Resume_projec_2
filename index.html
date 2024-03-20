@@ -17,19 +17,21 @@
     <input type="checkbox" id="dark_mode" />
     <div class="wrapper">
       <!-- header section -->
-      <header class="grid container">
+      <header class="flex">
         <div class="left flex_center">
           <h2>SHEKHAR SINGH</h2>
           <div class="divider"></div>
           <div class="job_title">Front end developer</div>
         </div>
-        <nav class="nav_container right flex_center">
-          <ul class="flex_center">
+        <label for="hambergerinput"><i class="fa-solid fa-bars"></i></label>
+        <input type="checkbox" id="hambergerinput" style="display: none" />
+        <nav class="nav_container right flex">
+          <ul class="flex">
             <li><a href="">Home</a></li>
             <li><a href="#skills">Skills</a></li>
             <li><a href="#projects">Projects</a></li>
             <li><a href="#about-me">About </a></li>
-            <li><a href="#contact-me">contact </a></li>
+            <li><a href="#contact-me">Contact </a></li>
           </ul>
         </nav>
         <label for="dark_mode"
@@ -38,7 +40,7 @@
       </header>
       <!-- main section -->
       <section class="hero flex_center">
-        <section class="hero_container grid flex">
+        <section class="flex hero_container">
           <div class="left flex_center">
             <div>Hi i'm <span>SHEKHAR SINGH</span></div>
             <div>Front-end Developer</div>
@@ -47,7 +49,7 @@
               <a href="" download> Download CV</a>
             </button>
           </div>
-          <div class="right">
+          <div class="right flex_center">
             <img src="./assests/resumepick.png" alt="my_photo" />
           </div>
         </section>
@@ -259,7 +261,11 @@
         </div>
       </section>
       <!-- footer section -->
-      <footer></footer>
+      <footer>
+        <div class="footer_container">
+          <div class="links"></div>
+        </div>
+      </footer>
     </div>
   </body>
 </html>
