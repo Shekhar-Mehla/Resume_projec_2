@@ -6,11 +6,14 @@
 a:hover,
 label:hover {
   cursor: pointer;
+  background-color: orangered;
+  transform: scale(5rem);
+  transition: all 2s;
 }
 :root {
   --bg-color: rgb(113 236 174 / 11%);
   --shadow: 2px 2px 40px #00000087;
-  --oranged-color: #18c02b;
+  --oranged-color: #67ba719c;
   --color: black;
   --radius: 30px;
   --white-color: white;
@@ -46,6 +49,7 @@ header {
   left: 0px;
   width: 100%;
   justify-content: space-around;
+  padding: 3rem;
 }
 .container {
   grid-template-areas: "left middle right";
@@ -75,7 +79,7 @@ header {
 }
 .nav_container {
   flex-direction: column;
-  font-size: 1.5rem;
+  font-size: 2rem;
   justify-content: center;
 }
 .nav_container > ul {
@@ -91,7 +95,7 @@ a {
 
 /* main section */
 .hero {
-  gap: 10rem;
+  padding: 11rem;
 }
 
 .hero_container {
@@ -143,9 +147,12 @@ a {
   border-radius: 1rem;
 }
 /* banner section */
+.banner {
+  padding: 3rem;
+}
 .banner_list {
-  width: 70vw;
-  height: 5rem;
+  width: 50vw;
+  height: 7rem;
   background-color: var(--bg-color);
   justify-content: space-around;
   border: 2px solid black;
@@ -157,16 +164,16 @@ a {
 }
 .banner-items .banner_logo {
   font-size: 3rem;
-  color: var(--oranged-color);
+  color: green;
 }
 .banner_content h4 {
-  color: var(--oranged-color);
+  color: var(green);
 }
 /* skill section */
 .skills {
   flex-direction: column;
-  padding-top: 15rem;
-  gap: 1rem;
+  padding: 19rem;
+  gap: 12rem;
 }
 .skills span {
   border-bottom: 5px solid orangered;
@@ -176,6 +183,7 @@ a {
 }
 .skills_list {
   width: 70vw;
+  padding: 2rem;
 
   gap: 4rem;
 }
@@ -190,8 +198,8 @@ a {
 
 .projects {
   flex-direction: column;
-  padding-top: 10rem;
-  gap: 5rem;
+  padding: 14rem;
+  gap: 12rem;
   margin-bottom: 3rem;
 }
 .projects > span {
@@ -209,7 +217,6 @@ a {
 [class^="project_list_item"] {
   width: 40%;
   box-shadow: var(--shadow);
-  border-radius: var(--radius);
 }
 .project_list_item1 {
   background-color: var(--oranged-color);
@@ -223,19 +230,20 @@ a {
 .project_list_item4 {
   background-color: var(--oranged-color);
 }
+
 .project_card {
   flex-direction: column;
   gap: 2rem;
   flex-wrap: wrap;
 }
+
 .project_card img {
   width: 100%;
-  border-top-left-radius: var(--radius);
-  border-top-right-radius: var(--radius);
 }
 .project_card .card_content {
   flex-direction: column;
-  gap: 1rem;
+  gap: 2rem;
+  padding: 2rem;
 }
 .card_content span {
   font-size: 1rem;
