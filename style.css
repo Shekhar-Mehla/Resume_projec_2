@@ -3,12 +3,13 @@
   box-sizing: border-box;
   margin: 0px;
 }
-a:hover,
+
 label:hover {
   cursor: pointer;
-  background-color: orangered;
-  transform: scale(5rem);
-  transition: all 2s;
+  font-size: 2.1rem;
+  background-color: var(--bg-color);
+  transform: scale(1);
+  transition: all 1s;
 }
 :root {
   --bg-color: rgb(113 236 174 / 11%);
@@ -49,7 +50,7 @@ header {
   left: 0px;
   width: 100%;
   justify-content: space-around;
-  padding: 3rem;
+  padding: 1.5rem;
 }
 .container {
   grid-template-areas: "left middle right";
@@ -95,7 +96,7 @@ a {
 
 /* main section */
 .hero {
-  padding: 11rem;
+  padding-top: 7rem;
 }
 
 .hero_container {
@@ -106,7 +107,7 @@ a {
   height: 13rem;
   box-shadow: var(--shadow);
   border-radius: var(--radius);
-  margin-top: 8rem;
+  margin-top: 3rem;
 }
 .hero_container .left {
   flex-direction: column;
@@ -148,10 +149,10 @@ a {
 }
 /* banner section */
 .banner {
-  padding: 3rem;
+  padding: 0.2rem;
 }
 .banner_list {
-  width: 50vw;
+  width: 60vw;
   height: 7rem;
   background-color: var(--bg-color);
   justify-content: space-around;
@@ -172,8 +173,9 @@ a {
 /* skill section */
 .skills {
   flex-direction: column;
-  padding: 19rem;
-  gap: 12rem;
+  padding-top: 13rem;
+  gap: 6rem;
+  padding-bottom: 1rem;
 }
 .skills span {
   border-bottom: 5px solid orangered;
@@ -198,9 +200,8 @@ a {
 
 .projects {
   flex-direction: column;
-  padding: 14rem;
-  gap: 12rem;
-  margin-bottom: 3rem;
+  padding: 10rem;
+  gap: 5rem;
 }
 .projects > span {
   border-bottom: 5px solid orangered;
@@ -233,7 +234,7 @@ a {
 
 .project_card {
   flex-direction: column;
-  gap: 2rem;
+  gap: 1rem;
   flex-wrap: wrap;
 }
 
@@ -242,7 +243,7 @@ a {
 }
 .project_card .card_content {
   flex-direction: column;
-  gap: 2rem;
+  gap: 1rem;
   padding: 2rem;
 }
 .card_content span {
@@ -253,26 +254,30 @@ a {
 }
 .project_card .card_content .project_info {
   padding-left: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  font-size: 1.3rem;
 }
 
 /* About me section */
 
 .about_me {
-  background-color: var(--oranged-color);
   flex-direction: column;
-  gap: 10rem;
-  padding-top: 6rem;
-  box-shadow: var(--shadow);
+  gap: 6rem;
+  padding: 11rem;
+
   padding-bottom: 3rem;
-  margin-top: 16rem;
 }
-.contact_me_container {
-  width: 40vw;
+.about_me_container {
+  width: 77vw;
   flex-direction: column;
+  gap: 5rem;
+  background-color: var(--oranged-color);
+  box-shadow: var(--shadow);
+  padding-top: 5rem;
 }
-.contact_me span {
-  background-color: unset;
-}
+
 .about_me span {
   font-size: 2rem;
   font-weight: bolder;
@@ -286,6 +291,7 @@ a {
 .about_me_card > img {
   border-radius: var(--radius);
   box-shadow: var(--shadow);
+  width: 44%;
 }
 .about_me_card_content {
   gap: 1rem;
@@ -297,11 +303,17 @@ a {
 
 /* contact section */
 .contact_me {
-  padding-top: 4rem;
+  padding-top: 10rem;
   flex-direction: column;
-  padding-bottom: 1rem;
+  padding-bottom: 12rem;
   font-size: 2rem;
-  margin: 17rem 2rem;
+}
+.contact_me_container {
+  width: 40vw;
+  flex-direction: column;
+}
+.contact_me span {
+  background-color: unset;
 }
 .contact_me_container {
   gap: 3rem;
@@ -315,9 +327,7 @@ a {
 .contact_links_list {
   gap: 1rem;
 }
-.contact_me span {
-  background-color: gray;
-}
+
 .email {
   border-radius: var(--radius);
   color: var(--white-color);
@@ -331,15 +341,50 @@ a {
 }
 /* footer section */
 footer {
-  height: 6rem;
+  height: auto;
   background-color: black;
-  margin-top: 2rem;
+  margin: 2rem;
+}
+footer {
+  margin: auto;
+  position: fixed;
+  left: 0vw;
+  bottom: 0vh;
+  width: 100%;
+}
+.footer_container {
+  width: 75vw;
+  color: white;
+  gap: 1rem;
+  flex-direction: column;
+  padding: 2rem;
+}
+.page_links {
+  flex-direction: column;
+  gap: 0.3rem;
+}
+footer a {
+  color: aliceblue;
+}
+li {
+  list-style: none;
+}
+.footer_container .page_links ul {
+  padding-inline-start: 0px;
+}
+.top_section {
+  gap: 2rem;
+}
+.socail_links {
+  flex-direction: column;
+  justify-content: center;
+  gap: 0.3rem;
 }
 /* dark mode added here */
 [for="dark_mode"] {
-  font-size: 3rem;
+  font-size: 2rem;
   position: fixed;
-  top: 5rem;
+  top: 7rem;
   left: 2rem;
 }
 #dark_mode:checked + .wrapper {
@@ -355,13 +400,14 @@ footer {
 @media (max-width: 770px) {
   /* hamburger menu bar starts here */
   #hambergerinput:checked + .nav_container {
-    left: 62vw;
+    left: 75vw;
     transition: 0.2s;
-    top: 5vh;
+    top: 9.8vh;
   }
   header {
     align-items: center;
     position: relative;
+    padding: 2rem;
   }
 
   [for="hambergerinput"] {
@@ -374,7 +420,7 @@ footer {
     position: absolute;
     width: 250px;
     height: 100vh;
-    background-color: red;
+    background-color: var(--oranged-color);
     top: -100vh;
     left: 62vw;
     line-height: 4rem;
@@ -389,11 +435,11 @@ footer {
     gap: 2rem;
     margin: 7rem 1px;
     justify-content: space-around;
-
     height: 30rem;
-
-    margin-top: 10rem;
+    margin-top: 1rem;
     padding-bottom: 2rem;
+
+    width: 92vw;
   }
   .hero_container .right {
     width: 100%;
@@ -404,6 +450,10 @@ footer {
     row-gap: 1rem;
     column-gap: 1rem;
     width: 100%;
+  }
+  .banner_list {
+    width: 92vw;
+    height: 9rem;
   }
   .skills {
     gap: 6rem;
@@ -422,37 +472,66 @@ footer {
   [class^="project_list_item"] {
     width: 100%;
   }
+  .project_card {
+    flex-direction: column;
+    gap: 1rem;
+    flex-wrap: wrap;
+    width: 100%;
+  }
+  .project_list {
+    width: 92vw;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 2rem;
+  }
   .about_me {
-    background-color: var(--oranged-color);
     flex-direction: column;
     gap: 9rem;
     padding-top: 2rem;
-    box-shadow: var(--shadow);
+
     padding-bottom: 4rem;
     margin-top: 2rem;
+  }
+  .about_me_container {
+    width: 92vw;
+    flex-direction: column;
+    gap: 5rem;
+    background-color: var(--oranged-color);
+    box-shadow: var(--shadow);
+    padding-top: 5rem;
+    padding-bottom: 2rem;
   }
   .about_me_card {
     width: 82vw;
     gap: 2rem;
     flex-direction: column;
+    justify-content: center;
+  }
+  .about_me_card_content {
+    gap: 1rem;
+    flex-direction: column;
+    font-size: 1.5rem;
   }
 }
 /* for iphone */
 
-@media (max-width: 770px) {
+@media (max-width: 400px) {
   /* hamburger menu bar starts here */
   #hambergerinput:checked + .nav_container {
     left: 62vw;
     transition: 0.2s;
-    top: 5vh;
+    top: 14vh;
+    font-size: 1.5rem;
+    line-height: 1.5;
   }
   header {
     align-items: center;
     position: relative;
   }
   header .left {
-    font-size: 0.6rem;
+    font-size: 0.8rem;
     font-weight: bolder;
+    margin-right: 0.3rem;
   }
 
   [for="hambergerinput"] {
@@ -460,12 +539,22 @@ footer {
     display: block;
     font-size: 2rem;
   }
+  [for="dark_mode"] {
+    font-size: 2rem;
+    position: fixed;
+    top: 7rem;
+    left: 1rem;
+  }
+  .nav_container {
+    background-color: var(--oranged-color);
+  }
 
   .nav_container {
     position: absolute;
     width: 250px;
     height: 100vh;
-    background-color: red;
+    background-color: black;
+
     top: -100vh;
     left: 62vw;
     line-height: 4rem;
@@ -474,16 +563,19 @@ footer {
   .nav_container ul {
     flex-direction: column;
   }
-
+  .nav_container a {
+    color: aliceblue;
+  }
+  .hero {
+    padding: 2px;
+  }
   .hero_container {
     flex-direction: column-reverse;
     gap: 2rem;
-    margin: 7rem 1px;
+    margin: 3rem 1px;
     justify-content: space-around;
-
     height: 30rem;
 
-    margin-top: 10rem;
     padding-bottom: 2rem;
     width: 90vw;
   }
@@ -508,7 +600,8 @@ footer {
   }
 
   .skills {
-    gap: 6rem;
+    gap: 2rem;
+    padding-top: 4rem;
   }
   .skills_list {
     width: 97vw;
@@ -526,19 +619,30 @@ footer {
   [class^="project_list_item"] {
     width: 100%;
   }
+  .projects {
+    flex-direction: column;
+    padding: 2rem;
+    gap: 5rem;
+  }
   .about_me {
-    background-color: var(--oranged-color);
     flex-direction: column;
     gap: 9rem;
     padding-top: 2rem;
-    box-shadow: var(--shadow);
+
     padding-bottom: 4rem;
     margin-top: 2rem;
   }
   .about_me_card {
-    width: 82vw;
+    width: 100%;
     gap: 2rem;
     flex-direction: column;
+    padding-left: 0.5rem;
+  }
+  .about_me_card img {
+    width: 86%;
+  }
+  .interest {
+    gap: 0.4rem;
   }
 
   .contact_me {
