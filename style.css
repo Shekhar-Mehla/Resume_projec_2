@@ -347,9 +347,7 @@ footer {
 }
 footer {
   margin: auto;
-  position: fixed;
-  left: 0vw;
-  bottom: 0vh;
+
   width: 100%;
 }
 .footer_container {
